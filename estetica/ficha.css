@@ -1,6 +1,7 @@
 ﻿div.container {
 	width: 100%;
 	max-width: 993px;
+	min-width: 993px;
 	margin: 30px auto;
 	display: flex;
 	flex-direction: column;
@@ -500,5 +501,14 @@ div.nota{margin-bottom:20px;min-height:79px}
 @-moz-document url-prefix(){div.nota{min-height:96px}}
 @media screen and (max-width:998px){div.linha.nota{padding-left:0;padding-right:0}}
 div.nota textarea{font-family:san-serif,Arial,Helvetica;width:985px;padding:5px;line-height:1.5;border:1px solid var(--border-color)}
-@media print{div.container{margin-top:0}div.container header.hidden{display:grid}div.ficha.fronte{page-break-after:always}div.col1.emblema-e-republica,div.container{visibility:visible}div.nota.no-print{display:none}div.nota textarea{padding:0}}div.nota textarea.bold{font-weight:700;border-color:transparent}
+@media print{div.container{margin-top:15px}div.container header.hidden{display:grid}div.ficha.fronte{page-break-after:always}div.col1.emblema-e-republica,div.container{visibility:visible}div.nota.no-print{display:none}div.nota textarea{padding:0}}div.nota textarea.bold{font-weight:700;border-color:transparent}
 div.nota textarea:focus{border:2px solid var(--blue)}
+
+
+
+/* JS */
+
+.fundo-vermelho {
+	background-color: #ff0000 !important;
+	color: var(--yt);
+}

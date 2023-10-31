@@ -5,7 +5,7 @@ const armazenamento={
 	
 	salvarDadosAdicionais() {
 		/*const dadosAdicionais = document.querySelectorAll("div.container > header input, footer.rodape-da-ficha input, input[type=date], textArea"); */
-		const dadosAdicionais = document.querySelectorAll("div.container > header input");
+		const dadosAdicionais = document.querySelectorAll("div.container input[type=text]");
 		for(let i=0;i<dadosAdicionais.length;i++)if(dadosAdicionais[i].addEventListener("input",()=>{if(localStorage.setItem(`trmats-${dadosAdicionais[i].id}`,`${dadosAdicionais[i].value}`),dadosAdicionais[i].matches("#nota")){let e=dadosAdicionais[i];e.value.length>0?e.classList.add("bold"):e.classList.remove("bold")}}),dadosAdicionais[i].value=localStorage.getItem(`trmats-${dadosAdicionais[i].id}`),dadosAdicionais[i].matches("#nota")){let e=dadosAdicionais[i];e.value.length>0?e.classList.add("bold"):e.classList.remove("bold")
 		}
 	}
