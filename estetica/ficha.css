@@ -14,6 +14,7 @@ div.container input {
 	text-align: center;
 	border: none;
 	outline: none;
+	font-size: 12px;
 }
 
 div.container input:focus {
@@ -22,9 +23,19 @@ div.container input:focus {
 	border-bottom: 2px solid var(--blue) !important;
 }
 
+
+div.container input[type=text] {
+	font-weight: 700;
+}
+
+div.container span,
+div.container input[readonly] {
+	cursor: default;
+}
+
 div.container > div.linha-de-titulo {
 	display: grid;
-    grid-template-columns: 80px 270px 600px;
+    grid-template-columns: 80px 278px 600px;
     justify-content: end;
 }
 
@@ -42,7 +53,7 @@ div.col.de-emblema figure img {
 }
 
 div.linha-de-titulo div.col.de-emblema span {
-	font-size: 9px;
+	font-size: 8px;
 	font-weight: 700;
 	line-height: 1.2;
 	display: flex;
@@ -53,12 +64,12 @@ div.linha-de-titulo div.col.de-emblema span {
 div.linha-de-titulo div.col.de-titulo {
 	position: relative;
     left: -12px;
-    padding-top: 2px;
+    padding-top: 6px;
 }
 
 div.linha-de-titulo div.col.de-titulo h1 {
 	margin: 0;
-	font-size: 21px;
+	font-size: 20px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -72,11 +83,12 @@ div.linha-de-titulo div.col.de-titulo span {
 }
 
 div.linha-de-titulo div.col.de-localizacao {
-	margin-left: 45px;
+	margin: 8px 0 0 40px;
     display: grid;
-    grid-template-columns: repeat(3, 153px) 95px;
+    grid-template-columns: repeat(3, 143px) 95px;
     max-height: 46px;
 }
+
 
 div.linha-de-titulo div.col.de-localizacao div.subcol {
 	border-left: 1px solid var(--border-color);
@@ -110,9 +122,16 @@ div.linha-de-titulo div.col.de-localizacao input {
 	border: none;
 	border-top: 1px solid var(--border-color);
 	border-bottom: 1px solid var(--border-color);
+	width: 100%;
 }
 
 /* Ficha propriamente dita */
+div.ficha {
+	position: relative;
+	top: -40px;
+}
+
+
 div.ficha header {
 	display: grid;
     grid-template-columns: repeat(10, 76px);
@@ -157,13 +176,14 @@ header span .sup {
 /* Corpo da ficha */
 div.ficha div.body {
 	display: grid;
-	grid-template-columns: 228px repeat(10, 76px);
+	grid-template-columns: 228px repeat(10, 76px) 22px;
 	border: 3px solid var(--fullblack);
+	margin-bottom: 15px;
 }
 
 div.body div.col.de-indicadores {
 	display: grid;
-    grid-template-rows: 24px calc(24px * 29) 48px;
+    grid-template-rows: 20px calc(20px * 29) calc(20px * 2);
 }
 
 
@@ -171,10 +191,11 @@ div.body > div:nth-child(n+2) {
 	border-right: 2px solid var(--fullblack);
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(32, 24px);
+	grid-template-rows: repeat(32, 20px);
 	overflow: hidden;
 }
 
+div.body > div.coluna.total,
 div.body > div:last-child {
 	border-right: none;
 }
@@ -208,7 +229,7 @@ div.col.de-indicadores div.linha-de-resultados div.coluna-de-sexo {
 div.col.de-indicadores div.linha-de-resultados div.coluna-de-neg-e-pos {
 	display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, calc(24px * 14));
+    grid-template-rows: repeat(2, calc(20px * 14));
 }
 
 div.linha-de-resultados div.coluna-de-neg-e-pos span {
@@ -230,7 +251,7 @@ div.linha-de-resultados div.coluna-de-neg-e-pos span.indet {
 div.linha-de-resultados div.coluna-de-faixas-etarias {
 	display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(14, calc(24px * 2));
+    grid-template-rows: repeat(14, calc(20px * 2));
 }
 
 div.linha-de-resultados div.coluna-de-faixas-etarias span {
@@ -245,7 +266,7 @@ div.linha-de-resultados div.coluna-de-faixas-etarias span {
 div.linha-de-resultados div.coluna-de-sexo {
 	display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(28, 24px);
+    grid-template-rows: repeat(28, 20px);
     font-size: 10px;
 }
 
@@ -277,7 +298,7 @@ div.col-com-titulo-historial-de-testagem span {
 div.linha-de-historial-de-testagem
 div.col-numero-de-vezes-testado {
 	display: grid;
-	grid-template-rows: repeat(2, 24px);
+	grid-template-rows: repeat(2, 20px);
 	border-right: 2px solid var(--fullblack);
 }
 
@@ -301,12 +322,177 @@ div.body div.coluna input {
 	border-bottom: 2px solid var(--fullblack);
 }
 
+div.body div.coluna input:last-child {
+	border-bottom: none;
+}
+
 div.body div.coluna input:nth-child(odd) {
 	background-color: var(--primary-color);
 }
 
 div.body div.coluna.total input {
 	font-weight: 700;
+}
+
+div.body div.coluna-de-alfabetizacao-das-linhas span {
+	font-size: 9px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* BODY ASIDE 1 */
+
+div.aside-body div.coluna input:nth-child(odd) {
+	background-color: var(--yt);
+}
+
+div.aside-body div.coluna input:nth-child(even) {
+	background-color: var(--primary-color);
+}
+
+div.aside-body._1 > div:nth-child(n+2) {
+	grid-template-rows: repeat(16, 20px);
+}
+
+div.ficha > h2 {
+	font-size: 15px;
+	font-weight: 700;
+	margin: 8px 0 4px 12px;
+}
+
+div.aside-body._1 div.col-de-indicadores {
+	display: grid;
+    grid-template-columns: 114px 76px 1fr;
+}
+
+div.aside-body._1 div.col-com-titulo-resultados-por-contacto-e-popkey {
+	display: grid;
+    grid-template-rows: calc(20px * 10) calc(20px * 6);
+}
+
+div.col-com-titulo-resultados-por-contacto-e-popkey div {
+	border-right: 2px solid var(--fullblack);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div.col-com-titulo-resultados-por-contacto-e-popkey div:first-child {
+	border-bottom: 2px solid var(--fullblack);
+}
+
+div.col-com-titulo-resultados-por-contacto-e-popkey div span {
+	text-align: center;
+}
+
+div.aside-body._1 div.col-com-tipo-de-popkey {
+	display: grid;
+	grid-template-rows: repeat(8, calc(20px * 2));
+	border-right: 2px solid var(--fullblack)
+}
+
+div.aside-body._1 div.col-com-tipo-de-popkey span {
+	border-bottom: 2px solid var(--fullblack);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+div.aside-body._1 div.col-com-tipo-de-popkey span:last-child {
+	border-bottom: none;
+}
+
+div.aside-body._1 div.linha-de-resultados-p-mais-e-n-menos {
+	display: grid;
+    grid-template-rows: repeat(16, 20px);
+}
+
+div.aside-body._1 div.linha-de-resultados-p-mais-e-n-menos span {
+	border-bottom: 2px solid var(--fullblack);
+	border-right: 3px solid var(--fullblack);
+	font-size: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.aside-body._1 div.linha-de-resultados-p-mais-e-n-menos span:last-child {
+	border-bottom: none;
+}
+
+/* BODY ASIDE 2*/
+div.ficha h2 span {
+	font-size: 13px;
+	font-weight: initial;
+	text-decoration: underline;
+}
+
+div.aside-body._2 > div:nth-child(n+2),
+div.aside-body._2 div.col-de-indicadores {
+	display: grid;
+	grid-template-rows: repeat(2, 20px);
+}
+
+div.aside-body._2 div.col-de-indicadores span {
+	font-size: 11px;
+	font-weight: 700;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 12px;
+	border-right: 3px solid var(--fullblack);
+}
+
+div.aside-body._2 div.col-de-indicadores span:first-child {
+	border-bottom: 2px solid var(--fullblack);
+}
+
+/* BODY ASIDE 3*/
+div.aside-body._3 > div:nth-child(n+2),
+div.aside-body._3 div.col-de-indicadores {
+	display: grid;
+	grid-template-rows: repeat(3, 20px);
+}
+
+div.aside-body._3 div.col-de-indicadores span:nth-child(2) {
+	border-bottom: 2px solid var(--fullblack);
+}
+
+/* Legenda */
+div.aside-body._3 {
+	margin-bottom: 0 !important;
+}
+
+div.legenda p {
+	margin: 2px 0;
+	font-size: 9px;
+	text-indent: 6px;
+}
+
+/* Rodape da ficha */
+footer.rodape-da-ficha {
+	display: grid;
+	grid-template-columns: 270px;
+	grid-template-rows: repeat(2, 17px);
+    justify-content: end;
+    justify-items: center;
+    padding-right: 30px;
+    margin-top: 10px;
+}
+
+
+footer.rodape-da-ficha label {
+	font-weight: 700;
+	margin: 8px 0;
+	order: 2;
+}
+
+
+footer.rodape-da-ficha input {
+	border-bottom: 1px solid var(--fullblack);
+	min-width: 260px;
 }
 
 
