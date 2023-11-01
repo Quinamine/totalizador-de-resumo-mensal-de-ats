@@ -187,6 +187,15 @@ div.body div.col.de-indicadores {
     grid-template-rows: 20px calc(20px * 29) calc(20px * 2);
 }
 
+@media screen and (max-width: 997px) {
+	div.body div.col.de-indicadores,
+	div.body div.col-de-indicadores {
+		background-color: var(--yt);
+		position: sticky;
+		left: -129px;
+		z-index: 1000;
+	}
+}
 
 div.body > div:nth-child(n+2) {
 	border-right: 2px solid var(--fullblack);
