@@ -47,9 +47,9 @@
                             <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center header__child--cursor">
                                 Realçar&nbsp;totais
                             </label>
-                        <li class="header__menu__li --display-none">
-                            <button class="header__menu__btn header__menu__btn--ir-para">Ir para a linha...</button>
                         <li class="header__menu__li header__menu__li--first-child">
+                            <button class="header__menu__btn header__menu__btn--ir-para">Ir para a linha...</button>
+                        <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--esvaziar-ficha">Esvaziar ficha</button>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--imprimir">
@@ -188,7 +188,7 @@
 									<span class="--fw-700 txt-x-center">Historial de Testagem</span>
 								</div>
 								<div class="grid-template-rows-2 linha__historial-de-testagem__indicadores">
-									<span class="--display-flex-xy-center --border-b">1<sup>a</sup>&nbsp;vez testado</span>
+									<span class="--display-flex-xy-center --border-b">1<sup class="linha-historial-de-testagem__sup-1a-vez-testado">a</sup>&nbsp;vez testado</span>
 									<span class="--display-flex-xy-center">Pos. (&plus;) no passado</span>
 								</div>
 								
@@ -997,7 +997,7 @@
             </div>
 
             <div class="dialog-box-ir-para --display-flex-y-center">
-                <input type=text class=dialog-box-ir-para__input-linha max=63 placeholder="Referência da linha (ex.: B.10)">
+                <input type=text class=dialog-box-ir-para__input-linha max=63 placeholder="Referência da linha (ex.: ww)">
                 <button class="dialog-box-ir-para__btn-ir" title="Ir para a linha">Ir</button>
                 <button class=dialog-box-ir-para__btn-fechar title=Fechar>×</button>
             </div>
@@ -1027,25 +1027,11 @@
                         <input type=checkbox checked id="checkbox-us" data-for=input-us>
                         <label for=checkbox-us>Unidade Sanitária</label>
                     <li>
-                        <input type=checkbox id=checkbox-mes checked data-for=input-mes>
-                        <label for=checkbox-mes>Mês</label>
-                    <li>
-                        <input type=checkbox id=checkbox-ano checked data-for=input-ano>
-                        <label for=checkbox-ano>Ano</label>
-                    <li>
-                        <input type=checkbox checked id="checkbox-nid" data-for=input-nid>
-                        <label for=checkbox-nid>NID da Unidade Sanitária</label>
-                    <li>
-                        <input type=checkbox id=checkbox-nome checked data-for=input-nome>
-                        <label for=checkbox-nome>Nome</label>
+                        <input type=checkbox id=checkbox-mes-ano checked data-for=input-mes-ano>
+                        <label for=checkbox-mes-ano>Mês/Ano</label>
                     <li>
                         <input type=checkbox id=checkbox-assinatura checked data-for=input-assinatura>
-                        <label for=checkbox-assinatura>
-                            Nome (Assinatura)
-                        </label>
-                    <li>
-                        <input type=checkbox id=checkbox-data checked data-for=input-data>
-                        <label for=checkbox-data>Data</label>
+                        <label for=checkbox-assinatura>Assinatura</label>
                     <li>
                         <input type=checkbox id=checkbox-comentarios checked data-for=input-comentarios>
                         <label for=checkbox-comentarios>Comentários</label>
@@ -1081,8 +1067,8 @@
 
                 <ul class="artigo__lista artigo__lista--ul">
                     <li>Um celular ou computador com acesso à internet;</li>
-                    <li>Ter colhido os dados de todos os indicadores da ficha nas fontes primárias (livro(s) de registo) da sua Unidade Sanitária;</li>
-                    <li>E por fim, preencher os dados nas células correspondentes em função das variáveis (indicador, sexo e faixa etária), e consequentemente os respectivos totais são, em tempo real, correcta e automaticamente calculados.</li>
+                    <li>Ter colhido os dados de todos os indicadores da ficha nas fontes primárias (livro(s) de registo de ATS) da sua Unidade Sanitária;</li>
+                    <li>E por fim, preencher os dados nas células correspondentes em função das variáveis (indicador, sexo, faixa etária e sector), e consequentemente os respectivos totais são, em tempo real, correcta e automaticamente calculados.</li>
                 </ul>
 
                 <p class="artigo__p--destaque">A utilização do totalizador é, de facto, uma garantia de um resumo correctamente totalizado, porém, isso simplesmente não define a qualidade do resumo. Você é o único responsável pela veracidade, lógica e concordância dos dados preenchidos e, portanto, pela qualidade do resumo. O totalizador só se limita a calcular os totais baseando-se exactamente nos dados que você fornece.</p>
@@ -1113,24 +1099,24 @@
             <article class="artigo artigo--ajuda layout-row layout-row--artigo-ajuda">
                 <h2 class="artigo__titulo artigo__titulo--nivel-1 artigo__titulo--ajuda-e-procedimentos">Ajuda e Procedimentos</h2>
                 
-                <details>
+                <details class="--display-none">
                     <summary>Realçar totais</summary>
                     <p>Adiciona um fundo cinzento a todas as células dos totais. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distingui-las facilmente de outras células. Muito útil em celulares.</p>
                 </details>
                 <details>
                     <summary >Ir para a linha...</summary>
-                    <p>Abre um campo no qual pode digitar um número de linha no formato <b>LETRA.NÚMERO</b> (ex.: <b>B.10</b> ou <b>B10</b>, o ponto é facultativo) e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
+                    <p>Abre um campo no qual pode digitar uma referência de linha em formato de uma ou duas letras (ex.: <b>y</b> ou <b>zz</b>) e, uma vez digitada a referência, a página rola até a linha correspondente a essa.</p>
                 </details>
                 <details>
                     <summary>Esvaziar ficha</summary>
                     <p>Comando para limpar as células da ficha após a confirmação da acção na caixa de diálogo que abre.</p>
                     
-                    <p>Permite também esvaziar campos adicionais (Província, Distrito, US, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando desse modo que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
+                    <p>Permite também esvaziar campos adicionais (Província, Distrito, Unidade Sanitária, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando desse modo que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
 
                     <figure class="details__moldura details__moldura--esvaziar-ficha">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo para esvaziamento da ficha" class="artigo__img"/>
 
-                        <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo para esvaziamento da ficha. Neste caso, os campos de <b>Província, Distrito, Unidade Sanitária e NID</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas, teriam seus campos esvaziados.</figcaption>
+                        <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo para esvaziamento da ficha. Neste caso, os campos de <b>Província, Distrito e Unidade Sanitária</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas, teriam seus campos esvaziados.</figcaption>
                     </figure>
 
                 </details>
@@ -1171,9 +1157,9 @@
                 </details>
                 <details class="artigo__details-motivo-de-red-cells">
                     <summary>Algumas células mudaram de cor de fundo para vermelho</summary>
-                    <p>As células do totalizador têm um tamanho para conter visivelmente 7 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">9999999</span>. Quando a célula recebe um número com mais de 7 algarismos, dá um alerta ao usuário ficando vermelha e eventualmente mostrando uma mensagem de texto com informação sobre a omissão dos algarismos e o real motivo.</p>
+                    <p>As células do totalizador têm um tamanho para conter visivelmente 11 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">99999999999</span>. Quando a célula recebe um número com mais de 11 algarismos, dá um alerta ao usuário ficando vermelha e eventualmente mostrando esta mensagem de texto para alertá-lo sobre a omissão dos algarismos e o real motivo.</p>
 
-                    <p class="artigo__p artigo__p--destaque">Para um país como Moçambique, em que o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">9999999</span>.</p>
+                    <p class="artigo__p artigo__p--destaque">Para um país como Moçambique, em que o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">99999999999</span>.</p>
                 </details>
                 <button class="artigo__btn-fechar artigo__btn-fechar--ajuda" title="Fechar">&times;</button>
             </article>

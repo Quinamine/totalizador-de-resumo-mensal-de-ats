@@ -131,7 +131,7 @@ body.--overflow-h {
     display: none;
 }
 
-@media screen and (min-width: 310px) {
+@media screen and (min-width: 311px) {
     .logo__span--hide-on-screen-s {
         display: initial;
     }
@@ -359,7 +359,7 @@ input[data-total]:focus,
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--reference-bgc);
+    background-color: var(--black--alpha-8);
     z-index: 999;
 }
 
@@ -800,7 +800,6 @@ details mark {
     background-color: var(--gray--d);
     text-align: left;
     font-size: 12px;
-    font-weight: 700;
 }
 
 .dialog-box-ir-para__input-linha:focus {
