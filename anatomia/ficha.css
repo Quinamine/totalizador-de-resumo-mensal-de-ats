@@ -1,0 +1,329 @@
+﻿.ficha {
+	width: var(--layout-width);
+	margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+}
+
+@media print {
+	.ficha {
+		margin-top: 0;
+	}
+}
+
+.ficha__header {
+	display: grid;
+    grid-template-columns: 80px 278px 586px;
+    justify-content: center;
+}
+
+.ficha__col-de-emblema{
+	position: relative;
+	margin-bottom: 2px;
+}
+
+.ficha__emblema {
+	width: 68px;
+    height: 70px;
+}
+
+.ficha__box-descricao-de-emblema span {
+	font-size: 8px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+}
+
+.ficha__col-de-titulo {
+	position: relative;
+    left: -12px;
+    padding-top: 6px;
+}
+
+.ficha__titulo {
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.ficha__span-modelo-sis-h20-b {
+	font-size: 10px;
+	font-weight: 700;
+	position: relative;
+    left: 2px;
+}
+
+.ficha__col-de-endereco {
+	margin: 8px 0 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 143px) 95px;
+    max-height: 46px;
+}
+
+.ficha__col-de-endereco__subcol {
+	display: grid;
+	grid-template-rows: 18px 28px;
+}
+
+.ficha__col-de-endereco__subcol input {
+	max-width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+
+/* Corpo da ficha */
+.ficha__body {
+	position: relative;
+	top: -40px;
+}
+
+.ficha__body__header {
+	display: grid;
+    grid-template-columns: repeat(10, 76px);
+    grid-template-rows: 40px;
+    margin-left: 228px;
+}
+
+@media screen and (min-width: 993px) {
+	.ficha__body__header {
+		position: sticky;
+		top: 0;
+		z-index: 10000;
+		background-color: var(--yt);
+	}
+}
+
+.ficha span {
+	line-height: 1.3;
+}
+
+.ficha__body__header span {
+	text-align: center;
+}
+
+.ficha__header__sup {
+	font-size: 9px;
+	margin-top: -9px;
+}
+
+/* Corpo da ficha */ 
+.grid-default {
+	display: grid;
+	grid-template-columns: 228px repeat(10, 76px) 22px;
+	margin-bottom: 15px;
+}
+
+.grid-default--no-margin-b {
+	margin-bottom: 0;
+}
+
+.ficha__col-de-indicadores {
+	display: grid;
+    grid-template-rows: 20px calc(20px * 29) calc(20px * 2);
+}
+
+@media screen and (max-width: 997px) {
+	.ficha__col-de-indicadores {
+		background-color: var(--yt);
+		position: sticky;
+		left: -129px;
+		z-index: 888;
+		border-right: 1px solid var(--cor-de-borda);
+		margin-right: -1px;
+	}
+}
+
+.ficha__col-de-indicadores__linha-resultados {
+    display: grid;
+    grid-template-columns: 114px repeat(3, 38px);
+}
+
+.ficha__col-de-indicadores__col-de-neg-e-pos {
+	display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, calc(20px * 14));
+}
+
+.ficha__col-de-indicadores__col-de-neg-e-pos span.indet {
+   position: relative;
+   left: 67px;
+}
+
+.ficha__col-de-indicadores__col-de-faixas-etarias {
+	display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(14, calc(20px * 2));
+}
+
+.ficha__col-de-indicadores__col-de-faixas-etarias span {
+	font-size: 11px;
+}
+
+.ficha__col-de-indicadores__col-de-sexo {
+	display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(28, 20px);
+    font-size: 10px;
+}
+
+.ficha__col-de-indicadores__linha-historial-de-testagem {
+	display: grid;
+	grid-template-columns: repeat(2, 114px);
+}
+
+.linha-historial-de-testagem__indicadores span {
+	font-size: 10px;
+	padding-right: 12px;
+}
+
+.linha-historial-de-testagem__indicadores span sup {
+	margin-bottom: 4px;
+}
+
+.ficha__col-de-inputs {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(32, 20px);
+	overflow: hidden;
+}
+
+.ficha__col-de-inputs input {
+	display: block;
+	width: 100%;
+}
+
+.ficha__col-de-inputs input:nth-child(n+2) {
+	border-top: 1px solid var(--cor-de-borda);
+}
+
+.ficha__col-de-inputs input:nth-child(odd) {
+	background-color: var(--cor-primaria);
+}
+
+.ficha__col-de-letras-das-linhas span {
+	font-size: 9px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Body 2 */
+.ficha__subtitulo {
+	font-size: 15px;
+	font-weight: 700;
+	margin: 8px 0 8px 12px;
+}
+
+.ficha__subtitulo--ligacao-clinica span {
+	font-size: 13px;
+	font-weight: initial;
+	text-decoration: underline;
+}
+
+.ficha__col-de-indicadores--testagem-de-subgrupos {
+	grid-template-rows: auto;
+    grid-template-columns: 114px 76px 1fr;
+}
+
+.testagem-de-subgrupos__col-resultados-por-contactos-e-por-pop-chave {
+	display: grid;
+    grid-template-rows: calc(20px * 10) calc(20px * 6);
+	text-align: center;
+}
+
+.testagem-de-subgrupos__col-populacao-chave {
+	display: grid;
+	grid-template-rows: repeat(8, calc(20px * 2));
+}
+
+.testagem-de-subgrupos__col-populacao-chave span {
+	font-size: 11px;
+	text-align: center;
+}
+
+.testagem-de-subgrupos__col-de-resultados span {
+	font-size: 10px;
+}
+
+.ficha__default--testagem-de-subgrupos input:nth-child(odd) {
+	background-color: var(--yt);
+}
+
+.ficha__default--testagem-de-subgrupos input:nth-child(even) {
+	background-color: var(--cor-primaria);
+}
+
+.container-de-indicador--flex-x-end {
+	justify-content: flex-end;
+	font-size: 11px;
+	padding-right: 12px;
+	font-weight: 700;
+}
+
+.ficha__rodape {
+	position: relative;
+	top: -40px;
+}
+
+.ficha__rodape__legenda p {
+	margin: 4px 0;
+	font-size: 10.5px;
+	text-indent: 6px;
+}
+
+.ficha__rodape__linha-de-assinatura {
+	display: grid;
+	grid-template-columns: 270px;
+	grid-template-rows: repeat(2, 17px);
+    justify-content: end;
+    justify-items: center;
+    padding-right: 30px;
+    margin-top: 15px;
+}
+
+.ficha__rodape__label-assinatura {
+	font-weight: 700;
+	margin: 8px 0;
+	order: 2;
+}
+
+.ficha__rodape__input-assinatura {
+	min-width: 260px;
+	text-align: center;
+}
+
+.ficha__col-nums-de-linha span {
+	font-size: 9px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main__container-de-campo-de-nota {
+	position: relative;
+	top: -50px;
+}
+
+/* Reutilizavel */
+.grid-template-rows-2 {
+	display: grid;
+	grid-template-rows: repeat(2, 20px);
+}
+
+.grid-template-rows-3 {
+	display: grid;
+	grid-template-rows: repeat(3, 20px);
+}
+
+.grid-template-rows-16 {
+	display: grid;
+	grid-template-rows: repeat(16, 20px);
+}
+
+.grid-template-rows-32 {
+	display: grid;
+	grid-template-rows: repeat(32, 20px);
+}
