@@ -95,7 +95,7 @@
 	.ficha__body__header {
 		position: sticky;
 		top: 0;
-		z-index: 888;
+		z-index: 333;
 		background-color: var(--yt);
 	}
 }
@@ -134,7 +134,7 @@
 		background-color: var(--yt);
 		position: sticky;
 		left: -129px;
-		z-index: 888;
+		z-index: 333;
 		border-right: 1px solid var(--cor-de-borda);
 		margin-right: -1px;
 	}

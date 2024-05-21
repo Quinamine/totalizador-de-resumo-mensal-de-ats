@@ -110,8 +110,8 @@ window.addEventListener("load", () => {
         alertarSobre(readonlyInputsMsg);
     }));
 
-    const gridInputs = document.querySelectorAll("[data-total]");
-    gridInputs.forEach (gi => gi.addEventListener("input", destacarCelulasSaturadas));
+    const inputsCelulares = document.querySelectorAll("[data-total]");
+    inputsCelulares.forEach (inputCelular => inputCelular.addEventListener("input", destacarCelulasSaturadas));
     destacarCelulasSaturadas();
 
     // Indicador nao aplicavel para APEs
