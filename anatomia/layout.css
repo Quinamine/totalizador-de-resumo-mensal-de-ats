@@ -24,6 +24,7 @@
     --blue--light: #2573b5;
     --purple: rgb(116, 116, 235);
     --orange: #faa032;
+    --greenyellow:greenyellow;
     --yellow: yellow;
     --brown: brown;
     --reference-bgc: var(--black--alpha-8);
@@ -234,6 +235,7 @@ main {
 input[data-total]:focus,
 .input-nao-celular:focus {
     border-bottom: 2px solid var(--blue);
+    background-color: var(--greenyellow) !important;
 }
 /* Campo de Nota */
 .main__container-de-campo-de-nota {
