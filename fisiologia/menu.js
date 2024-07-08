@@ -239,9 +239,9 @@ function eventos() {
 
     // PARTILHAR 
     const data = {
-        title: "Totalizador de Resumo Mensal de HIV/SIDA",
-        text: "O Totalizador de Resumo Mensal de HIV/SIDA é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
-        url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html"
+        title: "Totalizador de Resumo Mensal de ATS",
+        text: "O Totalizador de Resumo Mensal de ATS é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de ATS (Aconselhamento e Testagem em Saúde), por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de ATS actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
+        url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-ats/index.html"
     }
 
     const btnPartilhar = document.querySelector(".header__menu__btn--partilhar");
