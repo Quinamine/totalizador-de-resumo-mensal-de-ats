@@ -385,7 +385,6 @@ input[data-total]:focus,
     color: var(--yt);
 }
 
-
 /* Manipulacao com JS */
 @media screen {
     .--realcar-totais {
