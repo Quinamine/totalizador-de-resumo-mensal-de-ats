@@ -3,12 +3,12 @@
 const referencia = {
     retornarColuna(inputTarget) {
         const col = inputTarget.parentElement.dataset.col;
-        const colOutput = document.querySelector(".reference-row__output--col-name");
+        const colOutput = document.querySelector(".reference__output--col-name");
         colOutput.value = col;
     },
 
     retornarVazio() {
-        const outputs = document.querySelectorAll(".reference-row__output");
+        const outputs = document.querySelectorAll(".reference__output");
         for (const o of outputs) o.value = "";
     }
 }
