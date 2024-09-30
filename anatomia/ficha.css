@@ -175,10 +175,10 @@
 .ficha__col-de-inputs input:nth-child(odd) {
 	background-color: var(--cor-primaria);
 }
-[data-totalgeraleixox]:focus,
+[data-total]:focus,
 .input-nao-celular:focus {
     border-bottom: 2px solid var(--blue);
-    background-color: var(--greenyellow);
+    background-color: var(--greenyellow) !important;
     color: var(--cor-de-texto);
 }
 @media screen {
