@@ -156,6 +156,11 @@
 	font-size: 10px;
 	padding-right: 12px;
 }
+.ficha__col-de-indicadores__titulo-historial-de-testagem {
+	text-align: center;
+	font-size: 11px;
+	line-height: 1 !important;
+}
 .linha-historial-de-testagem__sup-1a-vez-testado {
 	margin-bottom: 8px;
 }
