@@ -125,6 +125,9 @@
     display: grid;
     grid-template-columns: 114px repeat(3, 38px);
 }
+.ficha__col-de-indicadores__titulo-resultados-por-grupos {
+	text-align: center;
+}
 .ficha__col-de-indicadores__col-de-neg-e-pos {
 	display: grid;
     grid-template-columns: 1fr;
