@@ -2,7 +2,7 @@
 
 ![Trecho do Totalizador do Resumo Mensal de ATS](imagens/totalizador-de-resumo-mensal-de-ats.png)
 
-O **Totalizador de Resumo Mensal de ATS** é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de ATS (Aconselhamento e Testagem em Saúde) por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de ATS actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+O **Totalizador de Resumo Mensal de ATS** é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de ATS (Aconselhamento e Testagem em Saúde) por meio do cálculo automático dos totais com base nos dados inseridos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de ATS actualmente vigente no Serviço Nacional de Saúde em Moçambique.
 
 
 ## Objectivos
