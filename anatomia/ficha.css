@@ -66,7 +66,6 @@
 .ficha__col-de-endereco__subcol input::-webkit-calendar-picker-indicator {
     display: none !important;
 }
-/* Corpo da ficha */
 .ficha__body {
 	position: relative;
 	top: -40px;
@@ -98,7 +97,6 @@
 	font-size: 9px;
 	margin-top: -9px;
 }
-/* Corpo da ficha */ 
 .grid-default {
 	display: grid;
 	grid-template-columns: 228px repeat(10, 76px) 22px;
