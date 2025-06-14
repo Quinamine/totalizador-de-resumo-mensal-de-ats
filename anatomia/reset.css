@@ -78,5 +78,5 @@ img {
 }
 ::selection {
     background-color: var(--cor-do-rodape);
-    color: var(--fullblack)
+    color: var(--black)
 }
