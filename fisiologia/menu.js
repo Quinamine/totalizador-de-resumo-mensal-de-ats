@@ -195,8 +195,11 @@ function eventos() {
     const btnAbrirAjuda = document.querySelector(".header__menu__btn--ajuda");
     btnAbrirAjuda.addEventListener("click", () => menu.abrirArtigo("ajuda"));
     const btnFecharAjuda = document.querySelector(".artigo__btn-x--fechar-ajuda")
-    btnFecharAjuda.addEventListener("click", () => menu.fecharArtigo("ajuda"));
-    // PARTILHAR 
+    btnFecharAjuda.addEventListener("click", () => {
+        menu.fecharArtigo("ajuda");
+        removerBordaDoMovitoDeRedCells();
+    });
+    // PARTILHAR
     const data = {
         title: "Totalizador de Resumo Mensal de ATS",
         text: "Totaliza automaticamente o resumo mensal de Aconselhamento e Testagem em Saúde com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo mensal actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
