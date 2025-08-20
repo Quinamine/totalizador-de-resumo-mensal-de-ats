@@ -156,7 +156,7 @@ window.addEventListener("load", () => {
     });
     inputObs.addEventListener("focus", () => inputObs.parentElement.classList.add("--focus"));
     inputObs.addEventListener("focusout", () => inputObs.parentElement.classList.remove("--focus"));
-     omitirLinkDesteServicoNoRodape();
+    omitirLinkDesteServicoNoRodape();
     // Tooltips
     const tooltipVazioIgualZero = document.querySelector(".tooltip--vazioigualzero");
     const tooltipMenuAjuda = document.querySelector(".tooltip--menu-ajuda");
